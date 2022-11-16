@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/roib20/argocd-test
+    repoURL: https://github.com/roib20/petbuddy-gitops
     path: argocd/apps
     targetRevision: main
   destination:
