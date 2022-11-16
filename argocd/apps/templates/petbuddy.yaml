@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: {{ .Values.spec.destination.server }}
-  project: default
+  project: {{ .Values.spec.project }}
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
     path: charts/petbuddy
@@ -18,3 +18,7 @@ spec:
       valueFiles:
       - "../values/my-petbuddy-values.yaml"
       - "../values/existingsecret.yaml"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates
 
 spec:
+  project: default
   destination:
     server: https://kubernetes.default.svc
   source:
