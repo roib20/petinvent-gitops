@@ -16,8 +16,8 @@ ingress:
     paths:
     - path: /
       pathType: Prefix
-  # tls:
-  # - cluster-issuer: letsencrypt-cert
-  # - secretName: petbuddy-party-tls
-  #   hosts:
-  #   - petbuddy.party
+  tls:
+  - cluster-issuer: letsencrypt-cert
+  - secretName: letsencrypt-cert
+    hosts:
+    - petbuddy.party
