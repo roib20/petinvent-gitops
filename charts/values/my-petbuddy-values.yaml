@@ -2,7 +2,7 @@ replicaCount: 3
 
 service:
   type: ClusterIP
-  port: 5000
+  port: 80
 
 ingress:
   enabled: true
@@ -16,8 +16,8 @@ ingress:
     paths:
     - path: /
       pathType: Prefix
-  tls:
-  - cluster-issuer: letsencrypt-cert
-  - secretName: petbuddy-party-tls
-    hosts:
-    - petbuddy.party
+  # tls:
+  # - cluster-issuer: letsencrypt-cert
+  # - secretName: petbuddy-party-tls
+  #   hosts:
+  #   - petbuddy.party
