@@ -48,7 +48,7 @@ spec:
                   name: {{ index .Values "postgresql-ha" "postgresql" "existingSecret" | quote }}
                   key: postgresql-password
           ports:
-            - name: app
+            - name: http
               containerPort: 5000
               protocol: TCP
           livenessProbe:
