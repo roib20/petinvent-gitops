@@ -11,6 +11,7 @@ ingress:
     external-dns.alpha.kubernetes.io/hostname: petbuddy.party
     cert-manager.io/cluster-issuer: letsencrypt-cert
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     # kubernetes.io/tls-acme: "true"
     # cert-manager.io/cluster-issuer: letsencrypt-cert
     # nginx.ingress.kubernetes.io/ssl-redirect: "true"
