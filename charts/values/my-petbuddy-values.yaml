@@ -17,6 +17,6 @@ ingress:
     - path: /
       pathType: Prefix
   tls:
-  - secretName: letsencrypt-cert
+  - secretName: petbuddy-party-tls
     hosts:
     - petbuddy.party
