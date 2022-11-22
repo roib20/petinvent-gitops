@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "petbuddy.labels" . | nindent 4 }}
 spec:
-  type: {{ if .Values.ingress.enabled }}ClusterIP{{ else }}{{ .Values.service.type }}{{ end }}
+  type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: http
