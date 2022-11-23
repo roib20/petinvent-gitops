@@ -9,9 +9,8 @@ ingress:
   className: nginx
   annotations:
     external-dns.alpha.kubernetes.io/hostname: petbuddy.party
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-    # kubernetes.io/tls-acme: "true"
+    kubernetes.io/tls-acme: "true"
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
     # nginx.ingress.kubernetes.io/ssl-redirect: "true"
 
   hosts:
