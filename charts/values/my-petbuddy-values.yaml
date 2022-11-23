@@ -20,6 +20,6 @@ ingress:
     - path: /
       pathType: Prefix
   tls:
-  - secretName: petbuddy-party-tls
+  - secretName: petbuddy-party-tls-prod
     hosts:
     - petbuddy.party
