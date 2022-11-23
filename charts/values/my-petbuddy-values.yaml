@@ -8,17 +8,17 @@ ingress:
   enabled: true
   className: nginx
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: "petbuddy.party,*.petbuddy.party"
+    external-dns.alpha.kubernetes.io/hostname: "petinvent.party,*.petinvent.party"
     kubernetes.io/tls-acme: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 
   hosts:
-  - host: petbuddy.party
+  - host: petinvent.party
     paths:
     - path: /
       pathType: Prefix
   tls:
-  - secretName: petbuddy-party-tls
+  - secretName: petinvent-party-tls
     hosts:
-    - petbuddy.party
+    - petinvent.party

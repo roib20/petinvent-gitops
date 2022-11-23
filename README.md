@@ -1,1 +1,1 @@
-# petbuddy-gitops
+# petinvent-gitops
