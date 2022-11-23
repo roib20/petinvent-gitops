@@ -10,20 +10,15 @@ ingress:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: "petbuddy.party,*.petbuddy.party"
     kubernetes.io/tls-acme: "true"
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
-    # nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 
   hosts:
-  # - host: petbuddy.party
-  #   paths:
-  #   - path: /
-  #     pathType: Prefix
-  - host: www.petbuddy.party
+  - host: petbuddy.party
     paths:
     - path: /
       pathType: Prefix
   tls:
   - secretName: petbuddy-party-tls
     hosts:
-    # - petbuddy.party
-    - www.petbuddy.party
+    - petbuddy.party
