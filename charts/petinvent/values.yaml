@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   pullPolicy: Always
-  repository: ghcr.io/roib20/petbuddy
+  repository: ghcr.io/roib20/petinvent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
