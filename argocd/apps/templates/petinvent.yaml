@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: petinvent
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  destination:
+    namespace: default
+    server: {{ .Values.spec.destination.server }}
+  project: {{ .Values.spec.project }}
+  source:
+    repoURL: {{ .Values.spec.source.repoURL }}
+    path: charts/petinvent
+    targetRevision: main
+    helm:
+      valueFiles:
+      - "../values/my-petinvent-values.yaml"
+      - "../values/existingsecret.yaml"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
