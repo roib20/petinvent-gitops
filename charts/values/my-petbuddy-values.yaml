@@ -14,10 +14,10 @@ ingress:
     # nginx.ingress.kubernetes.io/ssl-redirect: "true"
 
   hosts:
-  - host: petbuddy.party
-    paths:
-    - path: /
-      pathType: Prefix
+  # - host: petbuddy.party
+  #   paths:
+  #   - path: /
+  #     pathType: Prefix
   - host: www.petbuddy.party
     paths:
     - path: /
@@ -25,5 +25,5 @@ ingress:
   tls:
   - secretName: petbuddy-party-tls
     hosts:
-    - petbuddy.party
+    # - petbuddy.party
     - www.petbuddy.party
